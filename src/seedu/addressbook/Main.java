@@ -1,5 +1,7 @@
 package seedu.addressbook;
 
+import static seedu.addressbook.common.Messages.MESSAGE_READ_ONLY_STORAGE_FILE_ERROR;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,7 @@ import seedu.addressbook.parser.Parser;
 import seedu.addressbook.storage.StorageFile;
 import seedu.addressbook.storage.StorageFile.InvalidStorageFilePathException;
 import seedu.addressbook.storage.StorageFile.StorageOperationException;
+import seedu.addressbook.storage.StorageFile.StorageWriteException;
 import seedu.addressbook.ui.TextUi;
 
 
@@ -111,6 +114,8 @@ public class Main {
             CommandResult result = command.execute();
             storage.save(addressBook);
             return result;
+        } catch(StorageWriteException e) {
+            return new CommandResult(MESSAGE_READ_ONLY_STORAGE_FILE_ERROR + storage.getPath());
         } catch (Exception e) {
             ui.showToUser(e.getMessage());
             throw new RuntimeException(e);
