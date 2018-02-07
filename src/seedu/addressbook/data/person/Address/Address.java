@@ -25,7 +25,6 @@ public class Address {
     private Unit unit;
     private PostalCode postalCode;
 
-    public final String address;
     private boolean isPrivate;
 
     /**
@@ -39,7 +38,6 @@ public class Address {
         if (!isValidAddress(trimmedAddress)) {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS + ADDRESS_CONSTRAINTS);
         }
-        this.address = trimmedAddress;
 
         setAddressComponents(trimmedAddress);
     }
@@ -110,12 +108,12 @@ public class Address {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Address // instanceof handles nulls
-                && this.address.equals(((Address) other).address)); // state check
+                && this.equals(((Address) other))); // state check
     }
 
     @Override
     public int hashCode() {
-        return address.hashCode();
+        return this.hashCode();
     }
 
     public boolean isPrivate() {
