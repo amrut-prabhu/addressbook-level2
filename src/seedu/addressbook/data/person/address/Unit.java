@@ -29,4 +29,9 @@ public class Unit {
     public String getUnitNum() {
         return unitNum;
     }
+
+    @Override
+    public String toString() {
+        return getUnitNum();
+    }
 }

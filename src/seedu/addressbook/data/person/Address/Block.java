@@ -29,4 +29,9 @@ public class Block {
     public String getBlock() {
         return blockNum;
     }
+
+    @Override
+    public String toString() {
+        return getBlock();
+    }
 }

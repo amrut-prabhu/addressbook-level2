@@ -11,7 +11,7 @@ public class Address {
 
     public static final String EXAMPLE = "123, Clementi Ave 3, #12-34, 231534";
     public static final String MESSAGE_ADDRESS_CONSTRAINTS = "Person addresses should be in the format: ";
-    public static final String ADDRESS_CONSTRAINTS = "a/BLOCK, STREET, UNIT, POSTAL_CODE";
+    public static final String ADDRESS_CONSTRAINTS = "a/BLOCK, STREET, UNIT, POSTAL CODE";
     public static final String ADDRESS_VALIDATION_REGEX = "(.*), (.*), (.*), (.*)";
     public static final String ADDRESS_SPLIT_REGEX = ", ";
 
@@ -103,7 +103,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return address;
+        return block + ADDRESS_SPLIT_REGEX + street + ADDRESS_SPLIT_REGEX + unit + ADDRESS_SPLIT_REGEX + postalCode;
     }
 
     @Override

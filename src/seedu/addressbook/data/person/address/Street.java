@@ -29,4 +29,9 @@ public class Street {
     public String getStreet() {
         return streetAddress;
     }
+
+    @Override
+    public String toString() {
+        return getStreet();
+    }
 }
