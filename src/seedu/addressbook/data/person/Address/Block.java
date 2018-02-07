@@ -24,7 +24,7 @@ public class Block {
     /**
      * Returns block of the address
      *
-     * @return the block address of this street
+     * @return the block number of this address
      */
     public String getBlock() {
         return blockNum;

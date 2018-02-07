@@ -24,7 +24,7 @@ public class PostalCode {
     /**
      * Returns Postal Code of the address
      *
-     * @return the Postal Code of this street
+     * @return the Postal Code of this address
      */
     public String getPostalCode() {
         return postalCode;
