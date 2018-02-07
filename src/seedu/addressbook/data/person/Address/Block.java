@@ -1,4 +1,4 @@
-package seedu.addressbook.data.person.Address;
+package seedu.addressbook.data.person.address;
 
 /**
  * Represents a Person's block address in the address book.
