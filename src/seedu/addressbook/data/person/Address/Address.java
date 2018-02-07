@@ -38,7 +38,11 @@ public class Address {
         if (!isValidAddress(trimmedAddress)) {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS + ADDRESS_CONSTRAINTS);
         }
-
+        block = null;
+        street = null;
+        unit = null;
+        postalCode = null;
+        
         setAddressComponents(trimmedAddress);
     }
 
