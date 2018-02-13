@@ -33,7 +33,7 @@ public class TextUi {
     private final Scanner in;
     private final PrintStream out;
 
-    private final Formatter format;
+    private final static Formatter format = new Formatter();
 
     public TextUi() {
         this(System.in, System.out);
@@ -42,7 +42,6 @@ public class TextUi {
     public TextUi(InputStream in, PrintStream out) {
         this.in = new Scanner(in);
         this.out = out;
-        this.format = new Formatter();
     }
 
     /**
@@ -81,7 +80,7 @@ public class TextUi {
             fullInputLine = in.nextLine();
         }
 
-        showToUser("[Command entered:" + fullInputLine + "]");
+        showToUser(format.getFormattedMessage("[Command entered:" + fullInputLine + "]"));
         return fullInputLine;
     }
 
@@ -102,7 +101,7 @@ public class TextUi {
 
     /** Shows message(s) to the user */
     public void showToUser(String message) {
-        out.println(message);
+        out.print(message);
     }
 
     /**
@@ -142,7 +141,7 @@ public class TextUi {
             formatted.append(getIndexedListItem(displayIndex, listItem)).append("\n");
             displayIndex++;
         }
-        return formatted.toString();
+        return format.getFormattedMessage(formatted.toString());
     }
 
     /**

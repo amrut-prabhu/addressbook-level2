@@ -61,12 +61,10 @@ public class Formatter {
     /**
      * Returns formatted version of the messages.
      */
-    private String getFormattedMessage(String... message){
+    public String getFormattedMessage(String... message){
         StringBuilder formattedMessage = new StringBuilder();
         for (String m : message) {
-            formattedMessage.append(LINE_PREFIX);
-            formattedMessage.append(m.replace("\n", LS + LINE_PREFIX));
-            formattedMessage.append("\n");
+            formattedMessage.append(LINE_PREFIX).append(m.replace("\n", LS + LINE_PREFIX)).append(LS);
         }
         return formattedMessage.toString();
     }
