@@ -131,6 +131,18 @@
 
   # should have deleted based on last active view's index
   list
+  
+  # add new name to test sort
+  add Arthur Woods pp/999999 e/arwoods@nus.edu.sg a/999, sierra street t/friends
+  
+  # add new name to test sort
+  add Carl Gallagher pp/666666 e/carlg@nus.edu.sg a/666, lima street t/family
+
+  # display sorted list
+  sort
+
+  # deletes correct person
+  delete 2
 
   # deletes correct person
   delete 4
