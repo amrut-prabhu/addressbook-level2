@@ -20,8 +20,6 @@ public class Formatter {
 
     private static final String DIVIDER = "===================================================";
 
-    /** Format of indexed list item */
-    private static final String MESSAGE_INDEXED_LIST_ITEM = "\t%1$d. %2$s";
 
     /**
      * Returns a formatted version of the entire welcome message
@@ -44,6 +42,19 @@ public class Formatter {
                    DIVIDER);
     }
 
+    public String getFormattedGoodbyeMessage(String goodbyeMessage){
+        return getFormattedMessage(goodbyeMessage, DIVIDER, DIVIDER);
+    }
+
+    public String getFormattedInitFailedMessage(String failMessage){
+        return getFormattedMessage(failMessage, DIVIDER, DIVIDER);
+    }
+
+    public String getFormattedPrompt(String prompt){
+        return LINE_PREFIX + prompt;
+    }
+
+
     /**
      * Returns formatted version of the messages.
      */
@@ -51,8 +62,8 @@ public class Formatter {
         StringBuilder formattedMessage = new StringBuilder();
         for (String m : message) {
             formattedMessage.append(LINE_PREFIX);
-            formattedMessage.append(m.replace("\n", LS));
-            formattedMessage.append(LINE_PREFIX));
+            formattedMessage.append(m.replace("\n", LS + LINE_PREFIX));
+            formattedMessage.append("\n");
         }
     }
 
