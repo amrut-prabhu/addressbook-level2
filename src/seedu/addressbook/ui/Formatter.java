@@ -54,6 +54,9 @@ public class Formatter {
         return LINE_PREFIX + prompt;
     }
 
+    public String getFormattedResultFeedback(String resultFeedback){
+        return getFormattedMessage(resultFeedback, DIVIDER);
+    }
 
     /**
      * Returns formatted version of the messages.
@@ -65,6 +68,7 @@ public class Formatter {
             formattedMessage.append(m.replace("\n", LS + LINE_PREFIX));
             formattedMessage.append("\n");
         }
+        return formattedMessage.toString();
     }
 
 }
