@@ -4,8 +4,6 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
 
 import java.util.List;
 import java.util.Collections;
-import java.util.Comparator;
-
 
 /**
  * Lists all persons in the address book alphabetically to the user.
