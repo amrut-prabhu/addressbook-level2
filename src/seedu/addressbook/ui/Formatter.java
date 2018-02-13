@@ -23,6 +23,15 @@ public class Formatter {
     /** Format of indexed list item */
     private static final String MESSAGE_INDEXED_LIST_ITEM = "\t%1$d. %2$s";
 
+    /**
+     * Returns a formatted version of the entire welcome message
+     *
+     * @param version project version.
+     * @param storageFilePath path for address book data storage file.
+     * @param welcomeMessage welcome message text.
+     * @param argsMessage launch command format text.
+     * @return formatted version (eg. decorations) of entire welcome message
+     */
     public String getFormattedWelcomeMessage(String version, String storageFilePath, String welcomeMessage, String argsMessage) {
         String storageFileInfo = String.format(MESSAGE_USING_STORAGE_FILE, storageFilePath);
         return getFormattedMessage(
@@ -35,8 +44,16 @@ public class Formatter {
                    DIVIDER);
     }
 
+    /**
+     * Returns formatted version of the messages.
+     */
     private String getFormattedMessage(String... message){
-
+        StringBuilder formattedMessage = new StringBuilder();
+        for (String m : message) {
+            formattedMessage.append(LINE_PREFIX);
+            formattedMessage.append(m.replace("\n", LS));
+            formattedMessage.append(LINE_PREFIX));
+        }
     }
 
 }
