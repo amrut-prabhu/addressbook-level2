@@ -273,27 +273,57 @@
 || 
 || 4 persons listed!
 || ===================================================
-|| Enter command: || [Command entered:  add Arthur Woods pp/999999 e/arwoods@nus.edu.sg a/999, sierra street t/friends]
-|| New person added: Arthur Woods Phone: (private) 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
+|| Enter command: || [Command entered:  add Arthur Woods p/999999 e/arwoods@nus.edu.sg a/999, sierra street t/friends]
+|| New person added: Arthur Woods Phone: 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
 || ===================================================
 || Enter command: || [Command entered:  add Carl Gallagher pp/666666 e/carlg@nus.edu.sg a/666, lima street t/family]
 || New person added: Carl Gallagher Phone: (private) 666666 Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
 || ===================================================
-|| Enter command: || [Command entered:  sort]
+|| Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
-|| 	2. Arthur Woods Phone: 999999 Email: arwoods@gmail.com Address: 999, sierra street Tags: [friends] 
-|| 	3. Betsy Choo Tags: [secretive]
-|| 	4. Carl Gallagher Phone: 666666 Email: carlg@gmail.com Address: 666, lima street Tags: [family] 
-|| 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-|| 	6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	5. Arthur Woods Phone: 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
+|| 	6. Carl Gallagher Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
 || 
 || 6 persons listed!
 || ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Arthur Woods Phone: 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Carl Gallagher Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
+|| 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 
+|| 6 persons listed alphabetically!
+|| ===================================================
 || Enter command: || [Command entered:  delete 2]
-|| Deleted Person: Arthur Woods Phone: (private) 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
+|| Deleted Person: Arthur Woods Phone: 999999 Email: arwoods@nus.edu.sg Address: 999, sierra street Tags: [friends]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	5. Carl Gallagher Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
+|| 
+|| 5 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
 || Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	4. Carl Gallagher Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
+|| 
+|| 4 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  delete 4]
+|| Deleted Person: Carl Gallagher Phone: (private) 666666 Email: carlg@nus.edu.sg Address: 666, lima street Tags: [family]
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
