@@ -3,8 +3,6 @@ package seedu.addressbook.commands;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 
 import java.util.List;
-import java.util.Collections;
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 /**
  * Lists all persons in the address book alphabetically to the user.
@@ -32,16 +30,5 @@ public class SortCommand extends Command {
         return allPersons.stream()
                .sorted(((o1, o2) -> o1.getName().toString().compareToIgnoreCase(o2.getName().toString())))
                .collect(Collectors.toList());
-        /*
-        Collections.sort(allPersons, new Comparator<ReadOnlyPerson>(){
-            @Override
-            public int compare(ReadOnlyPerson p1,ReadOnlyPerson p2){
-               return p1.getName().toString().compareToIgnoreCase(p2.getName().toString());
-            }
-        });
-
-        Collections.sort(allPersons, (ReadOnlyPerson p1, ReadOnlyPerson p2)
-                         -> p1.getName().toString().compareToIgnoreCase(p2.getName().toString()));
-*/
     }
 }
