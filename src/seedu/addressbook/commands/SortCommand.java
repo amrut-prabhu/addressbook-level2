@@ -26,7 +26,7 @@ public class SortCommand extends Command {
      * @param allPersons list of all persons in the address book
      * @return list of persons ordered alphabetically
      */
-    private List<ReadOnlyPerson> getSortedList(List<ReadOnlyPerson> allPersons){
+    public List<ReadOnlyPerson> getSortedList(List<ReadOnlyPerson> allPersons){
         return allPersons.stream()
                .sorted(((person1, person2) -> person1.getName().toString().compareToIgnoreCase(person2.getName().toString())))
                .collect(Collectors.toList());
