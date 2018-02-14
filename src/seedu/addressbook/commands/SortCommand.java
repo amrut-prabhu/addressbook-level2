@@ -28,7 +28,7 @@ public class SortCommand extends Command {
      */
     private List<ReadOnlyPerson> getSortedList(List<ReadOnlyPerson> allPersons){
         return allPersons.stream()
-               .sorted(((o1, o2) -> o1.getName().toString().compareToIgnoreCase(o2.getName().toString())))
+               .sorted(((person1, person2) -> person1.getName().toString().compareToIgnoreCase(person2.getName().toString())))
                .collect(Collectors.toList());
     }
 }
