@@ -108,9 +108,24 @@ public class TestUtil {
         return numberOfElementsSeen;
     }
 
+    /**
+     * Creates a new person with predefined attributes.
+     *
+     * @return person with default values for all attributes
+     */
     public static Person generateTestPerson() {
+        return generateTestPerson(Name.EXAMPLE);
+    }
+
+    /**
+     * Creates a person with name personName
+     *
+     * @param personName name of the new person
+     * @return person with name personName and default values for other attributes
+     */
+    public static Person generateTestPerson(String personName) {
         try {
-            return new Person(new Name(Name.EXAMPLE), new Phone(Phone.EXAMPLE, false),
+            return new Person(new Name(personName), new Phone(Phone.EXAMPLE, false),
                     new Email(Email.EXAMPLE, true), new Address(Address.EXAMPLE, false), new UniqueTagList());
         } catch (IllegalValueException e) {
             fail("test person data should be valid by definition");
