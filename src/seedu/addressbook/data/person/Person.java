@@ -10,16 +10,21 @@ import java.util.Objects;
  */
 public class Person implements ReadOnlyPerson {
 
+    private static int nextSequenceNumber = 1;
+
+    private int sequenceNumber;
     private Name name;
     private Phone phone;
     private Email email;
     private Address address;
+
 
     private final UniqueTagList tags;
     /**
      * Assumption: Every field must be present and not null.
      */
     public Person(Name name, Phone phone, Email email, Address address, UniqueTagList tags) {
+        sequenceNumber = nextSequenceNumber++;
         this.name = name;
         this.phone = phone;
         this.email = email;
