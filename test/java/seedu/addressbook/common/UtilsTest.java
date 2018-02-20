@@ -9,9 +9,11 @@ import java.util.List;
 import org.junit.Test;
 
 public class UtilsTest {
-    
+
     @Test
     public void isAnyNull() throws Exception {
+        //Empty List
+        assertNotNull();
 
         // no null objects
         assertNotNull(1);
@@ -21,10 +23,9 @@ public class UtilsTest {
         assertNotNull("aaa", "bbb", "ccc");
 
         // some null objects
-        assertSomeAreNull(null);
         assertSomeAreNull("abc", null, "", null, "ABC");
         assertSomeAreNull("", "abc", "a", "xyz", null);
-        assertSomeAreNull(1, new Integer(1));
+        assertSomeAreNull(1, new Integer(1), null);
         assertSomeAreNull(null, 1, new Integer(1));
         assertSomeAreNull(null, null);
         assertSomeAreNull(null, null, "b", null);
